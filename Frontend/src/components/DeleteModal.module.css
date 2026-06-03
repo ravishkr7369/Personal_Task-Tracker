@@ -1,0 +1,126 @@
+/* src/components/DeleteModal.module.css */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalContainer {
+  background: rgba(25, 25, 35, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  padding: 28px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.warningIcon {
+  background: rgba(244, 67, 54, 0.15);
+  padding: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  color: #f44336;
+}
+
+.closeModalBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  padding: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  transition: all 0.2s;
+}
+
+.closeModalBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.modalMessage {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.modalMessage strong {
+  color: white;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.cancelModalBtn,
+.deleteModalBtn {
+  padding: 10px 24px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.cancelModalBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.cancelModalBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.deleteModalBtn {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+  color: white;
+}
+
+.deleteModalBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+}
+
+@media (max-width: 480px) {
+  .modalContainer {
+    padding: 20px;
+  }
+  
+  .modalActions {
+    flex-direction: column;
+  }
+  
+  .cancelModalBtn,
+  .deleteModalBtn {
+    text-align: center;
+  }
+}

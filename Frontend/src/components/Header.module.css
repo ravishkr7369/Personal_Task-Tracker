@@ -1,0 +1,115 @@
+/* src/components/Header.css */
+.header {
+  background: rgba(20, 20, 30, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 12px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #a8b2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statCard:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  font-size: 24px;
+}
+
+.activeStat .statIcon {
+  color: #ffd700;
+}
+
+.completedStat .statIcon {
+  color: #4caf50;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .headerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .statCard {
+    padding: 8px 16px;
+  }
+  
+  .statValue {
+    font-size: 1.2rem;
+  }
+}
