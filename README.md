@@ -10,9 +10,7 @@ Personal Task Manager is a full-stack web application built using React.js, Node
 
 ## Live Demo Links
 
-Frontend: https://personal-task-tracker-sand.vercel.app/
-
-Backend: https://personal-task-tracker-lgcy.onrender.com/
+Live Demo: https://personal-task-tracker-sand.vercel.app/
 
 GitHub Repository: https://github.com/yourusername/Personal_Task-Tracker
 
