@@ -27,8 +27,9 @@ const TaskList = ({ tasks, onEditTask, onDeleteTask, onToggleComplete }) => {
     <div className={styles.taskList}>
       <AnimatePresence>
         {tasks.map((task, index) => (
+          
           <motion.div
-            key={task.id}
+            key={task._id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, x: -100 }}

@@ -93,7 +93,7 @@ const TaskCard = ({ task, onEdit, onDelete, onToggleComplete }) => {
       >
         <div className={styles.cardHeader}>
           <button
-            onClick={() => onToggleComplete(task.id)}
+            onClick={() => onToggleComplete(task._id, task.completed)}
             className={styles.completeBtn}
           >
             {task.completed ? (
@@ -154,7 +154,7 @@ const TaskCard = ({ task, onEdit, onDelete, onToggleComplete }) => {
         isOpen={showDeleteModal}
         onClose={() => setShowDeleteModal(false)}
         onConfirm={() => {
-          onDelete(task.id);
+          onDelete(task._id);
           setShowDeleteModal(false);
         }}
         taskTitle={task.title}
